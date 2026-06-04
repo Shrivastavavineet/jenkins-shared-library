@@ -8,7 +8,8 @@ def call(Map config = [:]) {
 
             stage('Clone') {
                 steps {
-                    git url: config.REPO_URL
+                    git branch: 'main',
+                        url: config.REPO_URL
                 }
             }
 
